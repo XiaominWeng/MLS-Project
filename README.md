@@ -2,7 +2,7 @@
 Learn some coding things step by step, hope can be a little bit helpful. For this name, just guess its meaning.
 
 ```
-Teach one how to fish rather than giving one a fish
+Teaching one how to fish rather than giving one a fish
 ```
 
 *Based on Python, which is easy to start and make you focus on what you really want to do.*
