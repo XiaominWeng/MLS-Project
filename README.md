@@ -1,6 +1,10 @@
 # MLS Project
 Learn some coding things step by step, hope can be a little bit helpful. For this name, let's guess its meaning.
 
+```
+Teaching Finshing is always better than Giving a Fish
+```
+
 *Based on Python, which is easy to start and make you focus on what you really want to do.*
 
 ## Python Base and some usful packages
