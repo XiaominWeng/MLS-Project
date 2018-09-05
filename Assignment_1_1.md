@@ -69,4 +69,11 @@
 ```
 file.close() # 再看看该文件，就像新建的时候说的，在使用open打开文件之后，只是相当于在内存中的一个临时文件，在close文件之前都不会写入硬盘
 ```
-这就引来了一个问题：一旦在文件打开到close之前程序停了
+这就引来了一个问题：一旦在文件打开到close之前程序崩溃了，之前所有写入临时文件的内容都无法存入硬盘中的文件。针对这一点，Python有一个解决方案叫做上下文关键字，*with*(有兴趣深入了解一下的话可以看[这里](https://www.ibm.com/developerworks/cn/opensource/os-cn-pythonwith/))，其使用方法为：
+```
+with open('./Morning/Love/Sunday/everday.txt', 'w') as file:
+    file.write('Say something')
+    # you can write other code here
+file.write('I will not be written into file') # 这里会报错
+```
+在执行with下的所有语句时，都可以使用file这个变量，一旦跳出with，文件将被保存关闭，file也随之不能使用了；即使在with环境中程序崩溃了，Python也会自动把file保存并关闭，这样就避免了之前提到的问题。
